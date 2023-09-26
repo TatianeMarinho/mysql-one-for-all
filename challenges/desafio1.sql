@@ -27,17 +27,17 @@ CREATE TABLE artistes (
 CREATE TABLE albums (
 	album_id INT PRIMARY KEY AUTO_INCREMENT,
     `title` VARCHAR(100) NOT NULL,
-    artiste_id INT NOT NULL,
-    release_year YEAR NOT NULL,
-    FOREIGN KEY (artiste_id) REFERENCES artistes (artiste_id)
+    release_year YEAR NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE songs (
 	song_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     album_id INT NOT NULL,
+    artiste_id INT NOT NULL,
     length_second INT NOT NULL,
-	FOREIGN KEY (album_id) REFERENCES albums (album_id)
+	FOREIGN KEY (album_id) REFERENCES albums (album_id),
+    FOREIGN KEY (artiste_id) REFERENCES artistes (artiste_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE historic (
@@ -83,15 +83,15 @@ INSERT INTO SpotifyClone.artistes (artiste) VALUES
 	('Blind Guardian'),
 	('Nina Simone');
       
-INSERT INTO SpotifyClone.albums (title, artiste_id, release_year) VALUES
-	('Renaissance', '1', '2022'),
-	('Jazz', '2', '1978'),
-	('Hot Space', '2', '1982'),
-	('Falso Brilhante', '3', '1998'),
-	('Vento de Maio', '3', '2001'),
-	('QVVJFA?', '4', '2003'),
-	('Somewhere Far Beyond', '5', '2007'),
-	('I Put A Spell On You', '6', '2012');
+INSERT INTO SpotifyClone.albums (title, release_year) VALUES
+	('Renaissance', '2022'),
+	('Jazz', '1978'),
+	('Hot Space', '1982'),
+	('Falso Brilhante', '1998'),
+	('Vento de Maio', '2001'),
+	('QVVJFA?', '2003'),
+	('Somewhere Far Beyond', '2007'),
+	('I Put A Spell On You', '2012');
     
 INSERT INTO SpotifyClone.followed (artiste_id, user_id) VALUES
 	('1', '1'),
@@ -109,17 +109,17 @@ INSERT INTO SpotifyClone.followed (artiste_id, user_id) VALUES
 	('6', '7'),
 	('2', '1');
     
-INSERT INTO SpotifyClone.songs (title, album_id, length_second) VALUES
-	('"Samba em Paris"', '6', '267'),
-	('"Como Nossos Pais"', '4', '105'),
-	('"Feeling Good"', '8', '100'),
-	('"O Medo de Amar é o Medo de Ser Livre"', '5', '207'),
-	('"Virgo\’s Groove"', '1', '369'),
-	('"Under Pressure"', '3', '152'),
-	('"Break my Soul"', '1', '279'),
-	('"Don\'t Stop Me Now"', '2', '203'),
-	('"The Bard\'s Song"', '7', '244'),
-	('"Alien Superstar"', '1', '116');
+INSERT INTO SpotifyClone.songs (title, album_id, artiste_id, length_second) VALUES
+	('"Samba em Paris"', '6', '4', '267'),
+	('"Como Nossos Pais"', '4', '3', '105'),
+	('"Feeling Good"', '8', '6', '100'),
+	('"O Medo de Amar é o Medo de Ser Livre"', '5', '3', '207'),
+	('"Virgo\’s Groove"', '1', '1', '369'),
+	('"Under Pressure"', '3', '2', '152'),
+	('"Break my Soul"', '1', '1', '279'),
+	('"Don\'t Stop Me Now"', '2', '2', '203'),
+	('"The Bard\'s Song"', '7', '5', '244'),
+	('"Alien Superstar"', '1', '1', '116');
 
 INSERT INTO SpotifyClone.historic (`date`, user_id, song_id) VALUES
 	('2011-12-15 22:30:49', '7', '8'),
