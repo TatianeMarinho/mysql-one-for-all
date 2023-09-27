@@ -58,10 +58,10 @@ CREATE TABLE followed (
 ) ENGINE=InnoDB;
 
 INSERT INTO SpotifyClone.subscription (subscription_type, price) VALUES
-	('gratuito', 0),
-	('familiar', 8),
-	('universitario', 6),
-	('pessoal', 7);
+	('gratuito', 0.00),
+	('familiar', 7.99),
+	('universitario', 5.99),
+	('pessoal', 6.99);
 
 INSERT INTO SpotifyClone.users (name, age, date_subscription, subscription_id) VALUES
 	('Barbara Liskov', 82, '2019-10-20', 1),
