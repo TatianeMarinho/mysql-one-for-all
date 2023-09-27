@@ -110,16 +110,16 @@ INSERT INTO SpotifyClone.followed (artiste_id, user_id) VALUES
 	('2', '1');
 
 INSERT INTO SpotifyClone.songs (title, album_id, length_second) VALUES
-	('"Samba em Paris"', '6', '267'),
-	('"Como Nossos Pais"', '4', '105'),
-	('"Feeling Good"', '8', '100'),
-	('"O Medo de Amar é o Medo de Ser Livre"', '5', '207'),
-	('"Virgo\’s Groove"', '1', '369'),
-	('"Under Pressure"', '3', '152'),
-	('"Break my Soul"', '1', '279'),
-	('"Don\'t Stop Me Now"', '2', '203'),
-	('"The Bard\'s Song"', '7', '244'),
-	('"Alien Superstar"', '1', '116');
+	('Samba em Paris', '6', '267'),
+	('Como Nossos Pais', '4', '105'),
+	('Feeling Good', '8', '100'),
+	('O Medo de Amar é o Medo de Ser Livre', '5', '207'),
+	('Virgo\’s Groove', '1', '369'),
+	('Under Pressure', '3', '152'),
+	('Break my Soul', '1', '279'),
+	('Don\'t Stop Me Now', '2', '203'),
+	('The Bard\'s Song', '7', '244'),
+	('Alien Superstar', '1', '116');
 
 INSERT INTO SpotifyClone.historic (`date`, user_id, song_id) VALUES
 	('2011-12-15 22:30:49', '7', '8'),
