@@ -71,7 +71,7 @@ INSERT INTO SpotifyClone.users (name, age, date_subscription, subscription_id) V
 	('Sandi Metz', '58', '2018-04-29', '2'),
 	('Paulo Freire', '19', '2018-02-14', '3'),
 	('Bell Hooks', '26', '2018-01-05', '3'),
-	('Chistopher Alexander', '85', '2019-06-05', '4'),
+	('Christopher Alexander', '85', '2019-06-05', '4'),
 	('Judith Butler', '45', '2020-05-13', '4'),
 	('Jorge Amado', '58', '2017-02-17', '4');
 
