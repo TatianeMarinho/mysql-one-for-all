@@ -8,7 +8,7 @@ CREATE TABLE SpotifyClone.favorites_songs(
 
 INSERT INTO favorites_songs(user_id, song_id)
 VALUES
-	(1, 10),
+    (1, 10),
     (1, 2),
     (1, 3),
     (2, 8),
